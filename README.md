@@ -4,8 +4,8 @@
 
 ## Flashing Instructions
 ### Credentials
-admin password - admin12345678
-factory password - admin@888@
+admin password - admin12345678  
+factory password - admin@888@  
 
 ### Thingsboard activation link for Admin access:
 https://thingsboard.cloud/api/noauth/activate?activateToken=cw1SWGwyK_XTECwcFvxPzOgyQMnWDgCkzLayzq9S
