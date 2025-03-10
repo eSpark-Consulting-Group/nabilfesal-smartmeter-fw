@@ -26,7 +26,7 @@ https://thingsboard.cloud/api/noauth/activate?activateToken=cw1SWGwyK_XTECwcFvxP
    d. Username: `INDKOM`
    e. Password: `IND10`
    f. Topic: `v1/devices/me/telemetry`
-8. Repeat from step 5 and login from factory details. Goto system and then Mqtt and set all details from point 6 except username set to `INDKOMF`.
+8. Repeat from step 5 and login from factory password. Goto system and then Mqtt and set all details from point 6 except username set to `INDKOMF`.
 9. Goto Thingsboard and Entities > Devices > Add Device.
 10. Set the name and label to device uid assigned in point 3. 
 11. Click on the created device then manage credentials and set these details.
