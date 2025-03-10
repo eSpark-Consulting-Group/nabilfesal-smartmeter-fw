@@ -4,20 +4,39 @@
 
 ## Flashing Instructions
 ### Credentials
-admin password - admin12345678  
-factory password - admin@888@  
+#### Passwords
+1. admin12345678  (admin) - working
+2. admin@441322@ (factory) - working
+3. admin@888@  (factory)
+4. IESB24 (factory)
 
 ### Thingsboard activation link for Admin access:
 https://thingsboard.cloud/api/noauth/activate?activateToken=cw1SWGwyK_XTECwcFvxPzOgyQMnWDgCkzLayzq9S
 
 ### How to connect device to ThingsBoard
-1. Set a UID for it when first time setting up the device this will appear
-
-2. And input the user and password in the MQTT factory and admin details (i.e. Dashboard 1 and Dashboard 2 access)
-3. Goto Thingsboard and Add Device > Manage credentials > Input username password
-4. Goto Dashboard > Create copy of Dashboard 1 > Label it unique like "Developer Dashboard -1" (this is to view the real time readings from the device with all the columns defined by our customer)
-5. And after that create Dashboard 2 for the UID device, follow the same naming convention so easy for you to access it
-6. See all the screenshots attached
+1. Flash the [ATSAM image](https://github.com/eSpark-Consultants/nabilfesal-smartmeter-fw/tree/main/Binaries/Extracted/ATSAMD20G17) using jlink commander.
+2. Flash the [V3S image](https://github.com/eSpark-Consultants/nabilfesal-smartmeter-fw/tree/main/Binaries/Extracted/V3S) to SD card using Rufus and plug it into the board.
+3. Set a UID when the device is first powered up. Make sure to create a unique UID which is not a taken by any device in the cloud.
+4. Enter admin password and login to the device.
+5. Tap on 'i' symbol. Then again tap on 'i' symbol and login with admin password.
+6. Go to MQTT and set these details.
+   a. Broker IP: `thingsboard.cloud`
+   b. Broker Port: `1883`
+   c. Interval: `60`
+   d. Username: `INDKOM`
+   e. Password: `IND10`
+   f. Topic: `v1/devices/me/telemetry`
+8. Repeat from step 5 and login from factory details. Goto system and then Mqtt and set all details from point 6 except username set to `INDKOMF`.
+9. Goto Thingsboard and Entities > Devices > Add Device.
+10. Set the name and label to device uid assigned in point 3. 
+11. Click on the created device then manage credentials and set these details.
+    a. Client ID: {UID} or {UID}-2
+    b. Username: Assigned to device in previous steps
+    c. Password: Assigned to device in previous steps
+13. Repeat steps from step 9 for factory device. Add -2 in name and label.
+14. Goto Dashboard > Create copy of Dashboard 1 (Export and Import the dashboard) > Label it unique like "Developer Dashboard -1" (this is to view the real time readings from the device with all the columns defined by our customer)
+15. And after that create Dashboard 2 for the UID device, follow the same naming convention so easy for you to access it
+16. See all the screenshots attached
 ![image](https://github.com/user-attachments/assets/08d55b9c-67d8-4dc2-926a-221d34d92bbf)
 ![image](https://github.com/user-attachments/assets/82b5c7a9-5082-44b0-8f51-93d76b2a7d28)
 ![image](https://github.com/user-attachments/assets/391b86e8-75c9-4837-aaac-853d3f283d9c)
