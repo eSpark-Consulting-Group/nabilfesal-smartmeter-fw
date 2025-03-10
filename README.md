@@ -70,6 +70,14 @@ IND10000001
 - type: CSU
 - ID: 0000001
 
+## Factory Reset the Device
+This is needed if the admin or factory passwords are not opening the interface.
+1. Method 1 
+- Download below and put in USB drive
+   https://drive.google.com/file/d/1IOPQt9xLHunkDt5IRkITkw-7x4x3OiFO/view?usp=drive_link 
 
-
+- Plug the USB into MSM
+- Let the script run that will RESET the device
+2. Method 2 
+-  Create a new file in USB drive and the name it INDFR.sh and insert usb into usb slot.
 
