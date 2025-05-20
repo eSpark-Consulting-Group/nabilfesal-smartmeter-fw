@@ -4,11 +4,11 @@
 
 ## Flashing Instructions
 ### Credentials
-admin password - admin12345678  
-factory password - admin@888@  
+admin - waqar@esparkconsultants.com
+password - Creo0210332/*-
 
-### Thingsboard activation link for Admin access:
-https://thingsboard.cloud/api/noauth/activate?activateToken=cw1SWGwyK_XTECwcFvxPzOgyQMnWDgCkzLayzq9S
+### Thingsboard login link for Admin access:
+https://thingsboard.cloud/home
 
 ### How to connect device to ThingsBoard
 1. Set a UID for it when first time setting up the device this will appear
